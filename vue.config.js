@@ -4,8 +4,13 @@
 // })
 
 
+// module.exports = {
+//   publicPath: process.env.NODE_ENV === 'production'
+//     ? '/untitled-vue/'
+//     : '/'
+// }
+
+
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/untitled-vue/'
-    : '/'
+  publicPath: '/untitled-vue/'
 }
