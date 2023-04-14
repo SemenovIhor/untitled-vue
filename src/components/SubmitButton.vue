@@ -1,7 +1,7 @@
 <template>
   <button
-    v-on="`$listeners`"
     v-bind:type="type"
+    v-bind="$attrs"
     :class="{ btn: true, 'btn--outlined': outlined }"
   >
     <slot></slot>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "ButtonSelect",
+  name: "SubmitButton",
   props: {
     type: {
       type: String,
