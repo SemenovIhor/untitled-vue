@@ -10,18 +10,24 @@
           <StarRating :rating="rating" />
         </div>
         <div class="apartments-item__price">UAH {{ price }}</div>
+        <router-link
+          :to="{ name: 'apartment' }"
+          class="apartments-item__link"
+        ></router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { RouterLink } from "vue-router";
 import StarRating from "../StarRating.vue";
 
 export default {
   name: "ApartmentsItem",
   components: {
     StarRating,
+    RouterLink,
   },
   props: {
     descr: {
@@ -95,6 +101,14 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

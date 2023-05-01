@@ -1,23 +1,20 @@
 <template>
-  <ContainerList>
-    <form class="form" @submit.prevent="handleSubmit">
-      <CustomSelect :items="cities" v-model="city" class="form__select" />
-      <CustomInput v-model="price" placeholder="Ціна, від" />
-      <SubmitButton class="form__submit" type="submit">
-        Подбор жилья
-      </SubmitButton>
-    </form>
-  </ContainerList>
+  <form class="form" @submit.prevent="handleSubmit">
+    <CustomSelect :items="cities" v-model="city" class="form__select" />
+    <CustomInput v-model="price" placeholder="Ціна, від" />
+    <SubmitButton class="form__submit" type="submit">
+      Подбор жилья
+    </SubmitButton>
+  </form>
 </template>
 
 <script>
-import ContainerList from "../shared/ContainerList.vue";
 import CustomInput from "../shared/CustomInput.vue";
 import CustomSelect from "../shared/CustomSelect.vue";
-import SubmitButton from "../SubmitButton.vue";
+import SubmitButton from "../shared/SubmitButton.vue";
 
 export default {
-  components: { CustomSelect, CustomInput, SubmitButton, ContainerList },
+  components: { CustomSelect, CustomInput, SubmitButton },
   name: "ApartmentFilterForm",
   data() {
     return {

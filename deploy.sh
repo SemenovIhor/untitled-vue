@@ -12,4 +12,5 @@ git commit -m 'deploy'
 
 git push -f git@github.com:SemenovIhor/untitled-vue.git master:gh-pages
 
+
 cd -
