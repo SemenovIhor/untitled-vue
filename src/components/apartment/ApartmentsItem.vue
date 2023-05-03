@@ -11,7 +11,7 @@
         </div>
         <div class="apartments-item__price">UAH {{ price }}</div>
         <router-link
-          :to="{ name: 'apartment' }"
+          :to="{ name: 'apartment', params: { id }, query: { name: 'John' } }"
           class="apartments-item__link"
         ></router-link>
       </div>
@@ -30,6 +30,10 @@ export default {
     RouterLink,
   },
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     descr: {
       type: String,
       default: "",
