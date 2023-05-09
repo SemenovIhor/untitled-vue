@@ -27,6 +27,7 @@ import ApartmentsList from "../components/apartment/ApartmentsList.vue";
 import ApartmentFilterForm from "../components/apartment/ApartmentFilterForm.vue";
 import apartments from "../components/apartment/apartments";
 import ContainerList from "../components/shared/ContainerList.vue";
+// import { getApartmentsList } from "../services/apartments.service";
 
 export default {
   name: "HomePage",
@@ -51,6 +52,14 @@ export default {
       return this.filterByCityName(this.filterByPrice(this.apartments));
     },
   },
+  // async created() {
+  //   try {
+  //     const { data } = await getApartmentsList();
+  //     this.apartments = data;
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // },
   methods: {
     filter({ city, price }) {
       if (city !== undefined) {

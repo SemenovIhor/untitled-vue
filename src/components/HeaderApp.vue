@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <ContainerList>
-      <LogoHeader />
+      <router-link to="/">
+        <LogoHeader />
+      </router-link>
     </ContainerList>
   </header>
 </template>
