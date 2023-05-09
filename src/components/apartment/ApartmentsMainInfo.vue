@@ -4,7 +4,7 @@
       <h1 class="apartment-main-info__title">{{ apartment.title }}</h1>
       <StarRating :rating="apartment.rating" />
     </div>
-    <img :src="apartment.imgUrl" alt="" class="apartment-main-info__photo" />
+    <img :src="apartment.imgSrc" alt="" class="apartment-main-info__photo" />
     <p class="apartment-main-info__description">{{ apartment.descr }}</p>
   </article>
 </template>
