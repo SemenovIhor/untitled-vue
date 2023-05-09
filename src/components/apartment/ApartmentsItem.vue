@@ -1,7 +1,11 @@
 <template>
   <div class="apartments-item">
     <div class="apartments-item__inner">
-      <img :src="imgUrl" alt="" class="apartments-item__photo" />
+      <img
+        :src="`${publicPath}` + imgUrl"
+        alt=""
+        class="apartments-item__photo"
+      />
       <div class="apartments-item__content">
         <p class="apartments-item__description">
           {{ descr }}
@@ -11,7 +15,7 @@
         </div>
         <div class="apartments-item__price">UAH {{ price }}</div>
         <router-link
-          :to="{ name: 'apartment', params: { id }, query: { name: 'John' } }"
+          :to="{ name: 'apartment', params: { id } }"
           class="apartments-item__link"
         ></router-link>
       </div>
@@ -50,6 +54,11 @@ export default {
       type: String,
       default: "",
     },
+  },
+  data() {
+    return {
+      publicPath: process.env.BASE_URL,
+    };
   },
 };
 </script>

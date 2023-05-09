@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <ContainerList>
-      <router-link to="/">
+      <router-link to="/untitled-vue/">
         <LogoHeader />
       </router-link>
     </ContainerList>

@@ -7,9 +7,7 @@ module.exports = defineConfig({
 
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-   ? '/untitled-vue/'
-   : '/',
+  publicPath: '/untitled-vue/',
   
   pages: {
     index: {
@@ -19,7 +17,7 @@ module.exports = {
       title: 'Home Page',
       chunks: ['chunk-vendors', 'chunk-common', 'index']
       },
-    }
+    },
     
   }
 
